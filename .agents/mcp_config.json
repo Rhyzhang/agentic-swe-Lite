@@ -1,0 +1,26 @@
+{
+  "$schema": "https://modelcontextprotocol.io/schema/mcp-config.json",
+  "mcpServers": {
+    "postgres-db": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-postgres",
+        "postgresql://user:password@localhost:5432/my_database"
+      ],
+      "env": {
+        "DB_READONLY": "true"
+      }
+    },
+    "browser-automation": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-puppeteer"
+      ]
+    },
+    "team-docs-remote": {
+      "url": "https://mcp.internal.mycompany.com/mcp"
+    }
+  }
+}
